@@ -84,7 +84,7 @@ WHERE row_number=1;
 
 the results of the above query: 
 
-![model](/images/query results.png)
+![model](/images/query%20results.png)
 
 
 
