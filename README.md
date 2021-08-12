@@ -12,13 +12,13 @@ In this project therefore, we will build a data pipeline for a (fictitious) stoc
 
 from the screenshot below we can see the urls follow a fixed pattern. we can use this to download the data in an incremental fashion.
 
-
+![model](/images/wiki-snippet.png)
 
 
 
 #### Workflow
 
-
+![model](/images/workflow.jpg)
 
 #### How to run
 
@@ -59,19 +59,11 @@ check out the documentation for reference in creating postgres connection https:
    
 
 #### Output
+![model](/images/dag-run.png)
 
+![model](/images/final-task-logs.png)
 
-
-
-
-
-
-
-
-
-
-
-
+![model](/images/db-results.png)
 
 
 After a number of DAG runs, the Postgres database will contain a few records extracted from the Wikipedia pageviews. Once an hour, Airflow now automatically downloads the new hourly pageviews data set, unzips it, extracts the desired counts, and writes these to the Postgres database. We can now ask questions such as “At which hour is each page most popular?”
@@ -92,7 +84,7 @@ WHERE row_number=1;
 
 the results of the above query: 
 
-
+![model](/images/query results.png)
 
 
 
